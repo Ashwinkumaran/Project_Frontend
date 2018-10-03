@@ -1,8 +1,9 @@
+<body style="background-color:rgb(162,255,255)">
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-<title>mobile-Shop</title>
+<title>Ashwin-Mobile</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,7 +19,7 @@
 			
 			<c:if test="${!sessionScope.loggedIn }">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="<c:url value="/Home"/>">Home</a>
+				<li><a href="<c:url value="/Home"/>">Home</a>
 				<li><a href="<c:url value="/Login"/>">Login</a></li>
 				<li><a href="<c:url value="/Register"/>">Register</a></li>
 			</ul>
@@ -58,4 +59,7 @@
 		</div>
 	</nav>
 </div>
+
 </body>
+
+</html>

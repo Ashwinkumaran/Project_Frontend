@@ -55,7 +55,7 @@ public class ProductController
 	{
 		productDAO.addProduct(product);
 		
-		String imagePath="C:\\MavenProject\\Project_Frontend\\src\\main\\webapp\\resources\\images";
+		String imagePath="C:\\MavenProject\\Project_Frontend\\src\\main\\webapp\\resources\\images\\";
 		imagePath=imagePath+String.valueOf(product.getProductId())+".jpg"; 
 		File myFile=new File(imagePath);
 		

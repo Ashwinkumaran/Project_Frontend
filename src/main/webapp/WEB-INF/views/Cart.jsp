@@ -1,5 +1,5 @@
 <%@include file="Header.jsp"%>
-
+<body>
 <table align="center" class="table table-bordered">
 <tr><td colspan="5"><h3 align="center">Your Cart</h3></td></tr>
 <tr>
@@ -33,3 +33,4 @@
 </tr>
 </table>
 </body>
+<%@include file="Footer.jsp" %>

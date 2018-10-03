@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.niit.dao.CartDAO;
+
 import com.niit.dao.ProductDAO;
 import com.niit.model.CartItem;
 import com.niit.model.Category;
+import com.niit.model.OrderDetail;
 import com.niit.model.Product;
 import com.niit.model.User;
 
@@ -29,6 +31,7 @@ public class CartController
 	
 	@Autowired
 	CartDAO cartDAO;
+	
 	
 	public long calcGrandTotalValue(List<CartItem> listCartItems)
 	{
@@ -127,6 +130,7 @@ public class CartController
 		
 		return "OrderDetail";
 	}
+	
 	
 	public LinkedHashMap<Integer,String> getCartItemList(List<CartItem> CartItemlist)
 	{

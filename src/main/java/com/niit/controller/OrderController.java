@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ import com.niit.dao.CartDAO;
 import com.niit.dao.OrderDAO;
 import com.niit.model.CartItem;
 import com.niit.model.OrderDetail;
+import com.niit.model.User;
 
 @Controller
 public class OrderController 
@@ -51,6 +53,18 @@ public class OrderController
 		
 		orderDAO.insertOrderDetail(orderDetail);
 		
+		return "ThankYou";
+	}
+	@RequestMapping(value="/ThankYou")
+	public String showInvoice(@ModelAttribute("user")User user,HttpSession session,Model m)
+	{
+		CartItem cartItem=new CartItem();
+		m.addAttribute("cartItem",cartItem);
+		
+		String username=(String)session.getAttribute("username");
+		
+		List<OrderDetail> orderList=orderDAO.retrieveOrder(username);
+		m.addAttribute("orderList",orderList);
 		return "ThankYou";
 	}
 	

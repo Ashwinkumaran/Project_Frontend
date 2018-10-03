@@ -1,4 +1,5 @@
 
 <%@include file="Header.jsp"%>
-<h2>Admin Home</h2>
+<center><b><h2>Admin Page</h2></b> </center>
 </body>
+<%@include file="Footer.jsp" %>

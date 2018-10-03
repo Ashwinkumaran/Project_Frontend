@@ -34,7 +34,7 @@
 <table align="center">
 
 <tr>
-	<td colspan="2"><center><b><u>Supplier Details</u></b><br></br></center></td>
+	<td colspan="2"><center><b><u> Enter Supplier Details</u></b><br></br></center></td>
 </tr>
 <tr>
 	<td><b>Supplier Name</b></td>
@@ -59,7 +59,9 @@
 
 <c:if test="${flag}">
 <table align="center" class="table table-striped">
-<tr><td colspan="3"><center><h3><b>Supplier Details</b></h3></center></td></tr>
+
+<tr><td colspan="8"><center><h3><b>Supplier Detail</b></h3></center></td></tr>
+
 <tr>
 	<td><b>Supplier Id</b></td>
 	<td><b>Supplier Name</b></td>
@@ -80,3 +82,4 @@
 </table>
 </c:if>
 </body>
+<%@include file="Footer.jsp" %>

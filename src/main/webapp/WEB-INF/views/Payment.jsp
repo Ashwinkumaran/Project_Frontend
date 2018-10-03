@@ -1,12 +1,13 @@
 <%@include file="Header.jsp"%>
 <br></br>
 <form action="PaymentProcess" method="post">
-<table align="center" width="40%" class="yable table-bordered">
+<table align="center" width="40%" class="table table-bordered">
 	<tr><td colspan="2">Payment Process</td></tr>
 	<tr>
 		<td>Payment Mode</td>
 		<td>
 			<input type="radio" name="pmode" value="CC">Credit Card
+			<input type="radio" name="pmode" value="CD">Cash On Delivery
 		</td>
 	</tr>
 	<tr>
@@ -27,3 +28,4 @@
 </table>
 </form>
 </body>
+<%@include file="Footer.jsp" %>

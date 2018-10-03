@@ -1,4 +1,4 @@
+<%@include file="Header.jsp"%>
 
-<%@include file="Header.jsp" %>
-<h1 align="center">Thank you, Your order has been placed.</h1>
-</body>
+<h5> <center> <b>Thank you, Your order has been placed.</b></center></h5>
+<%@include file="Footer.jsp" %>

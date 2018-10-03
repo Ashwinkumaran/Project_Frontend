@@ -4,7 +4,7 @@
 <table align="center" class="table">
 <tr>
 	<td rowspan="10">
-			<img src="<c:url value="/resources/images/${product.productId}.jpg"/>">
+			<img src="<c:url value="/resources/images/${product.productId}.jpg"/>" width="250" height="250"/>
 	</td>
 </tr>
 <tr>
@@ -39,3 +39,4 @@
 <h3 align="center"><input type="Submit" value="ADD TO CART" class="btn btn-primary"/></h3>
 </form>
 </div></body>
+<%@include file="Footer.jsp" %>

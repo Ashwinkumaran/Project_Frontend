@@ -21,7 +21,10 @@
 	<td><b>${grandTotalPrice}</b></td>
 </tr>
 <tr>
-	<td colspan="3"><a href="<c:url value="/Cart"/>" class="btn btn-info">Move To Cart</a></td>
-	<td colspan="2"><a href="<c:url value="/Payment"/>" class="btn btn-danger">Proceed For Paymentt</a></td>
+	<tr>
+	<td colspan="3"><a href="<c:url value="/Cart"/>" class="btn btn-danger">Move To Cart</a></td>
+	<td colspan="2"><a href="<c:url value="/Payment"/>" class="btn btn-primary">Proceed For Payment</a></td>
+</tr>
 </tr>
 </table></body>
+<%@include file="Footer.jsp" %>

@@ -118,3 +118,4 @@
 </table>
 </c:if>
 </body>
+<%@include file="Footer.jsp" %>

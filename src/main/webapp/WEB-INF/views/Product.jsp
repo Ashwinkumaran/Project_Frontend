@@ -53,7 +53,7 @@
 </c:if>
 
 <c:if test="${!flag}">
-<form:form action="http://localhost:8080/Project_Frontend/updateProduct/${product.productId }" modelAttribute="product" method="post" enctype="multipart/form-data">
+<form:form action="http://localhost:8080/Project_Frontend/updateProduct/${product.productId}" modelAttribute="product" method="post" enctype="multipart/form-data">
 <table align="center">
 
 <tr>
@@ -129,3 +129,4 @@
 </table>
 </c:if>
 </body>
+<%@include file="Footer.jsp" %>
