@@ -6,8 +6,8 @@
 				<div class="col-md-4 col-xs-12 col-sm-6">
 				<div class="thumbnail">
 						<h4>
-					<span data-toggle="tooltip" title="Bootstrap version">${product.productName}&nbsp;
-								Rs.${product.price}/-</span>
+					<span data-toggle="tooltip" title="Bootstrap version"><font face="timesnewroman" color="gold">${product.productName}&nbsp;
+								Rs.${product.price}/-</font></span>
 				</h4>
 						<img src="<c:url value="/resources/images/${product.productId}.jpg"/>"width="250" height="250" alt="Image Not Supported"/> 
 							<a href="<c:url value="/ProductDisplay/${product.productId}"/>"

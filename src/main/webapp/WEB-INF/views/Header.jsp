@@ -1,4 +1,4 @@
-<body style="background-color:rgb(162,255,255)">
+<body background="https://i.ytimg.com/vi/XzTCntGgNJU/maxresdefault.jpg">
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -6,6 +6,11 @@
 <title>Ashwin-Mobile</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/whhg.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -50,9 +55,10 @@
     		 <li><a href="<c:url value="/ContactUs"/>">Contact Us</a></li>
 			 <c:if test="${sessionScope.loggedIn }">
 			 
-			 	<li><a href="<c:url value="/Cart"/>">Your Cart</a></li>
+			 <li><a href="<c:url value="/Cart"/>">Your Cart</a></li>
 			 	<li><a href="<c:url value="/CheckOut"/>">Your Orders</a></li>
-			 
+			 <li><i class="material-icons" style="font-size:48px;color:rgb(93,241,255)">account_circle</i></li>
+			 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome ${sessionScope.username }<span class="caret"></span></a>
 			 <li><a href="perform_logout" class="btn "><font color="blue">Logout</font></a></li>
 			 </c:if>
 			 </div>

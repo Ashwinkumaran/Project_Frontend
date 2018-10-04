@@ -7,7 +7,7 @@
 <table align="center">
 
 <tr>
-	<td colspan="2"><center><b><u>Enter Product Detail</u></b></br></center></td>
+	<td colspan="2"><center><b><u><font size="4" face="verdana" color="black">Enter Product Detail</font></u></b></br></center></td>
 </tr>
 <tr>
 	<td><b>Product Name</b></td>
@@ -102,24 +102,24 @@
 <table align="center" class="table table-striped">
 <tr><td colspan="8"><center><h3><b>Product Detail</b></h3></center></td></tr>
 <tr>
-	<td><b>Product Id</b></td>
-	<td><b>Product Name</b></td>
-	<td><b>Product Description</b></td>
-	<td><b>Price</b></td>
-	<td><b>Stock</b></td>
-	<td><b>Category</b></td>
-	<td><b>Supplier</b></td>
-	<td><b>Operation</b></td>
+	<td><b><font face="verdana" color="gold">Product Id</font></b></td>
+	<td><b><font face="verdana" color="gold">Product Name</font></b></td>
+	<td><b><font face="verdana" color="gold">Product Description</font></b></td>
+	<td><b><font face="verdana" color="gold">Price</font></b></td>
+	<td><b><font face="verdana" color="gold">Stock</font></b></td>
+	<td><b><font face="verdana" color="gold">Category</font></b></td>
+	<td><b><font face="verdana" color="gold">Supplier</font></b></td>
+	<td><b><font face="verdana" color="gold">Operation</font></b></td>
 </tr>
 <c:forEach items="${productList}" var="product">
 <tr>
-	<td>${product.productId }</td>
-	<td>${product.productName }</td>
-	<td>${product.productDesc }</td>
-	<td>${product.price }</td>
-	<td>${product.quantity }</td>
-	<td>${product.categoryId}</td>
-	<td>${product.supplierId }</td>
+	<td><font face="timesnewroman" color="yellow">${product.productId }</font></td>
+	<td><font face="timesnewroman" color="yellow">${product.productName }</font></td>
+	<td><font face="timesnewroman" color="yellow">${product.productDesc }</font></td>
+	<td><font face="timesnewroman" color="yellow">${product.price }</font></td>
+	<td><font face="timesnewroman" color="yellow">${product.quantity }</font></td>
+	<td><font face="timesnewroman" color="yellow">${product.categoryId}</font></td>
+	<td><font face="timesnewroman" color="yellow">${product.supplierId }</font></td>
 	<td>
 	<a href="<c:url value="/deleteProduct/${product.productId }"/>" class="btn btn-danger">Delete</a>
 	<a href="<c:url value="/editProduct/${product.productId }"/>" class="btn btn-info">Edit</a>	

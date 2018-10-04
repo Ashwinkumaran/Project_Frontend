@@ -1,24 +1,24 @@
 <%@include file="Header.jsp"%>
 
 <table align="center" class="table table-bordered">
-<tr><td colspan="5"><h3 align="center">Your Order</h3></td></tr>
+<tr><td colspan="5"><h3 align="center"><font face="timesnewroman" color="black">Your Order</font></h3></td></tr>
 <tr>
-	<td>Product Name</td>
-	<td>Price</td>
-	<td>Quantity</td>
-	<td>Total Price</td>
+	<td><font face="verdana" color="gold">Product Name</font></td>
+	<td><font face="verdana" color="gold">Price</font></td>
+	<td><font face="verdana" color="gold">Quantity</font></td>
+	<td><font face="verdana" color="gold">Total Price</font></td>
 </tr>
 <c:forEach items="${cartItemList}" var="cartItemList">
 <tr>
-	<td>${cartItemList.productName }</td>
-	<td>${cartItemList.price }</td>
-	<td>${cartItemList.quantity }</td>
-	<td>${cartItemList.quantity*cartItemList.price }</td>
+	<td><font face="timesnewroman" color="yellow">${cartItemList.productName }</font></td>
+	<td><font face="timesnewroman" color="yellow">${cartItemList.price }</font></td>
+	<td><font face="timesnewroman" color="yellow">${cartItemList.quantity }</font></td>
+	<td><font face="timesnewroman" color="yellow">${cartItemList.quantity*cartItemList.price }</font></td>
 </tr>
 </c:forEach>
 <tr>
-	<td colspan="3">Grand Total</td>
-	<td><b>${grandTotalPrice}</b></td>
+	<td colspan="3"><font face="verdana" color="gold">Grand Total</font></td>
+	<td><b><font face="timesnewroman" color="yellow">${grandTotalPrice}</font></b></td>
 </tr>
 <tr>
 	<tr>

@@ -2,15 +2,18 @@
 
 <html>
 <body>
+
+
+
 <div class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT US</h2>
   <br><br>
   <div class="row">
     <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Madurai,Tamil Nadu</p>
-      <p><span class="glyphicon glyphicon-phone"></span> 99999999999</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> ashwinMobile@gmail.com</p> 
+      <p><font size="3" color="gold">Contact us and we'll get back to you within 24 hours.</font></p>
+      <p><font size="2" color="gold"><span class="glyphicon glyphicon-map-marker"></span> Madurai,Tamil Nadu</font></p>
+      <p><font size="2" color="gold"><span class="glyphicon glyphicon-phone"></span> 99999999999</font></p>
+      <p><font size="2" color="gold"><span class="glyphicon glyphicon-envelope"></span> ashwinMobile@gmail.com</font></p> 
     </div>
     <div class="col-sm-7">
       <div class="row">

@@ -1,5 +1,6 @@
 package com.niit.controller;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -26,48 +27,6 @@ public class OrderController
 	
 	@Autowired 
 	OrderDAO orderDAO;
-	
-	@RequestMapping(value="/Payment")
-	public String showPaymentPage()
-	{
-		return "Payment";
-	}
-	
-	@RequestMapping(value="/PaymentProcess",method=RequestMethod.POST)
-	public String paymentProcess(@RequestParam("pmode")String pmode,HttpSession session,Model m)
-	{
-		
-		
-		String username=(String)session.getAttribute("username");
-		
-		List<CartItem> listCartItems=cartDAO.retrieveCartItems("username");
-		m.addAttribute("cartItems",cartDAO.retrieveCartItems(username));
-		m.addAttribute("grandTotal",this.calcGrandTotalValue(listCartItems));
-		
-		OrderDetail orderDetail=new OrderDetail();
-		
-		orderDetail.setUsername(username);
-		orderDetail.setOrderDate(new java.util.Date());
-		orderDetail.setPmode(pmode);
-		orderDetail.setTotalShoppingAmount((int)this.calcGrandTotalValue(listCartItems));
-		
-		orderDAO.insertOrderDetail(orderDetail);
-		
-		return "ThankYou";
-	}
-	@RequestMapping(value="/ThankYou")
-	public String showInvoice(@ModelAttribute("user")User user,HttpSession session,Model m)
-	{
-		CartItem cartItem=new CartItem();
-		m.addAttribute("cartItem",cartItem);
-		
-		String username=(String)session.getAttribute("username");
-		
-		List<OrderDetail> orderList=orderDAO.retrieveOrder(username);
-		m.addAttribute("orderList",orderList);
-		return "ThankYou";
-	}
-	
 	public long calcGrandTotalValue(List<CartItem> listCartItems)
 	{
 		int count=0;
@@ -79,4 +38,59 @@ public class OrderController
 		}
 		return grandTotalPrice;
 	}
+	
+	@RequestMapping(value="/Payment")
+	public String showPaymentPage(@ModelAttribute("cartItem")CartItem cartItem,HttpSession session,Model m)
+	{
+		return "Payment";
+	}
+	
+	@RequestMapping(value="/PaymentProcess",method=RequestMethod.POST)
+	public String paymentProcess(@RequestParam("pmode")String pmode,@ModelAttribute("user")User user,HttpSession session,Model m)
+	{
+		
+		
+		String username=(String)session.getAttribute("username");
+		
+		List<CartItem> listCartItems=cartDAO.retrieveCartItems("username");
+		m.addAttribute("cartItems",listCartItems);
+		m.addAttribute("grandTotal",this.calcGrandTotalValue(listCartItems));
+		
+		OrderDetail orderDetail=new OrderDetail();
+		
+		orderDetail.setUsername(username);
+		orderDetail.setOrderDate(new java.util.Date());
+		orderDetail.setPmode(pmode);
+		orderDetail.setTotalShoppingAmount((int)this.calcGrandTotalValue(listCartItems));
+		orderDAO.insertOrderDetail(orderDetail);
+		
+		return "ThankYou";
+	}
+	@RequestMapping(value="/Invoice")
+	public String showInvoice(@ModelAttribute("user")User user,HttpSession session,Model m)
+	{
+		CartItem cartItem=new CartItem();
+		m.addAttribute("cartItem",cartItem);
+		
+		String username=(String)session.getAttribute("username");
+		
+		List<OrderDetail> orderList=orderDAO.retrieveOrder(username);
+		m.addAttribute("orderList",orderList);
+		return "Invoice";
+	}
+	
+	
+	public LinkedHashMap<Integer,String> getOrderList(List<OrderDetail> orderlist)
+	{
+		LinkedHashMap<Integer,String> orderData=new LinkedHashMap<Integer,String>();
+		
+		int count=0;
+		while(count<orderlist.size())
+		{
+			orderData.put(orderlist.get(count).getOrderId(),orderlist.get(count).getUsername());
+			count++;
+		}
+		return orderData;
+	}
+	
 }

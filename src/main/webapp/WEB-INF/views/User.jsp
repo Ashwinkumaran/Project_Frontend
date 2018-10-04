@@ -7,7 +7,7 @@
 <table align="center">
 
 <tr>
-	<td colspan="2"><center><b>Enter User Details</b><br></br></center></td>
+	<td colspan="2"><center><b><font size="3" face="verdana" color="gold">Enter User Details</font></b><br></br></center></td>
 </tr>
 <tr>
 	<td><b>Username</b></td>
@@ -40,7 +40,7 @@
 
 <tr>
 	<td colspan="4"><center></br>
-	<input type="submit" value="Insert User" class="btn "/>
+	<input type="submit" value="Insert User" class="btn btn-success"/>
 	</center>
 	</td>
 
@@ -79,7 +79,7 @@
 
 <tr>
 	<td colspan="4"><center></br>
-	<input type="submit" value="Update User" class="btn "/>
+	<input type="submit" value="Update User" class="btn btn-success "/>
 	</center>
 	</td>
 
@@ -91,15 +91,17 @@
 
 <c:if test="${flag}">
 <table align="center" class="table table-striped">
-<tr><td colspan="7"><center><h3><b>User Details</b></h3></center></td></tr>
+<tr><td colspan="7"><center><h3><b><font face="verdana" color="black">User Details</font></b></h3></center></td></tr>
 <tr>
-	<td><b>User Id</b></td>
-	<td><b>Username</b></td>
-	<td><b>Enabled</b></td>
-	<td><b>Role</b></td>
-	<td><b>Mobile Number</b></td>
-	<td><b>Email Id</b></td>
-	<td><b>Operation</b></td>
+
+	<td><b><font face="verdana" color="gold">User Id</font></b></td>
+	<td><b><font face="verdana" color="gold">Username</font></b></td>
+	<td><b><font face="verdana" color="gold">Enabled</font></b></td>
+	<td><b><font face="verdana" color="gold">Role</font></b></td>
+	<td><b><font face="verdana" color="gold">Mobile Number</font></b></td>
+	<td><b><font face="verdana" color="gold">Email Id</font></b></td>
+	<td><b><font face="verdana" color="gold">Operation</font></b></td>
+	</font>
 </tr>
 <c:forEach items="${userList}" var="user">
 <tr>
@@ -110,8 +112,8 @@
 	<td>${user.mobileNo }</td>
 	<td>${user.emailId }</td>
 	<td>
-	<a href="<c:url value="/deleteUser/${user.userId }"/>" class="btn">Delete</a>
-	<a href="<c:url value="/editUser/${user.userId }"/>" class="btn">Edit</a>	
+	<a href="<c:url value="/deleteUser/${user.userId }"/>" class="btn btn-danger">Delete</a>
+	<a href="<c:url value="/editUser/${user.userId }"/>" class="btn btn-success">Edit</a>	
 	</td>
 </tr>
 </c:forEach>

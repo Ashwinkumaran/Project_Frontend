@@ -8,31 +8,31 @@
 	</td>
 </tr>
 <tr>
-	<td>Product Id</td>
-	<td>${product.productId}</td>
+	<td><font face="timesnewroman" color="gold">Product Id</font></td>
+	<td><font face="verdana" color="white">${product.productId}</font></td>
 </tr>
 
 <tr>
-	<td>Product Name</td>
-	<td>${product.productName}</td>
+	<td><font face="timesnewroman" color="gold">Product Name</font></td>
+	<td><font face="verdana" color="white">${product.productName}</font></td>
 </tr>
 
 <tr>
-	<td>Price</td>
-	<td>${product.price}</td>
+	<td><font face="timesnewroman" color="gold">Price</font></td>
+	<td><font face="verdana" color="white">${product.price}</font></td>
 </tr>
 
 <tr>
-	<td>Supplier Id</td>
-	<td>${product.supplierId}</td>
+	<td><font face="timesnewroman" color="gold">Supplier Id</font></td>
+	<td><font face="verdana" color="white">${product.supplierId}</font></td>
 </tr>
 
 <tr>
-	<td>Product Description</td>
-	<td>${product.productDesc}</td>
+	<td><font face="timesnewroman" color="gold">Product Description</font></td>
+	<td><font face="verdana" color="white">${product.productDesc}</font></td>
 </tr>
 <tr>
-	<td>Quantity</td>
+	<td><font face="timesnewroman" color="gold">Quantity</font></td>
 	<td><input type="text" name="quantity" required></td>
 </tr>
 </table>

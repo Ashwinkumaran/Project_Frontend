@@ -60,16 +60,16 @@
 <h3><b>Category Details</b></h3></center></td>
 		</tr>
 		<tr>
-			<td><b>Category Id</b></td>
-			<td><b>Category Name</b></td>
-			<td><b>Category Description</b></td>
-			<td><b>Operation</b></td>
+			<td><b><font face="verdana" color="gold">Category Id</font></b></td>
+			<td><b><font face="verdana" color="gold">Category Name</font></b></td>
+			<td><b><font face="verdana" color="gold">Category Description</font></b></td>
+			<td><b><font face="verdana" color="gold">Operation</font></b></td>
 		</tr>
 		<c:forEach items="${categoryList}" var="category">
 			<tr>
-				<td>${category.categoryId }</td>
-				<td>${category.categoryName }</td>
-				<td>${category.categoryDesc }</td>
+				<td><font face="timesnewroman" color="yellow">${category.categoryId }</font></td>
+				<td><font face="timesnewroman" color="yellow">${category.categoryName }</font></td>
+				<td><font face="timesnewroman" color="yellow">${category.categoryDesc }</font></td>
 				<td><a
 					href="<c:url value="/deleteCategory/${category.categoryId }"/>"
 					class="btn btn-danger">Delete</a> <a
